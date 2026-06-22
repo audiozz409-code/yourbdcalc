@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BDCalc - Free Bangladesh calculators for salary, VAT, land measurement, EMI, age, BMI and more. Fast, accurate, mobile-friendly tools.">
+<meta name="keywords" content="bangladesh calculator, salary calculator bangladesh, vat calculator bangladesh, land calculator bangladesh, emi calculator bd, age calculator bangladesh">
+<title>BDCalc — Free Bangladesh Calculators 2026</title>
+
+<!-- -----------------------------------------------
+     LAYER 1: MONETAG MULTITAG
+     Replace {MONETAG_PUBLISHER_ID} with your real ID
+     Handles: In-Page Push + Vignette + Onclick
+     Position: First script in <head>
+------------------------------------------------ -->
+<!-- MONETAG MULTITAG START -->
+<!-- <script src="//cdn.monetag.com/multitag.js?z={MONETAG_PUBLISHER_ID}" async></script> -->
+<!-- MONETAG MULTITAG END -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f0f4f8;
+  --surface: #ffffff;
+  --surface2: #f8fafc;
+  --border: #e2e8f0;
+  --green: #006a4e;
+  --green-light: #008a64;
+  --green-pale: #e6f4f0;
+  --red: #c41e3a;
+  --red-pale: #fdf0f2;
+  --gold: #f4a200;
+  --gold-pale: #fff8e6;
+  --text: #1a202c;
+  --text2: #4a5568;
+  --text3: #718096;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.10);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* -- HEADER -- */
+.site-header {
+  background: var(--green);
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,80,50,.3);
+}
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--gold); }
+.header-tagline {
+  font-size: 11px;
+  color: rgba(255,255,255,.65);
+  font-weight: 400;
+}
+
+/* -- HERO BANNER -- */
+.hero {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+  padding: 28px 16px 24px;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.hero p {
+  font-size: 13px;
+  opacity: .8;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.hero-flag {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* -- AD SLOT — LEADERBOARD (desktop) -- */
+.ad-leaderboard {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  text-align: center;
+  display: none;
+}
+.ad-leaderboard .ad-label {
+  font-size: 9px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+@media (min-width: 768px) { .ad-leaderboard { display: block; } }
+
+/* -- MAIN LAYOUT -- */
+.main-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 12px 40px;
+}
+
+/* -- TOOL GRID -- */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+@media (min-width: 600px) {
+  .tool-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 900px) {
+  .tool-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.tool-btn {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .18s;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.tool-btn:hover, .tool-btn.active {
+  border-color: var(--green);
+  background: var(--green-pale);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.tool-btn .tool-icon { font-size: 22px; line-height: 1; }
+.tool-btn .tool-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+/* -- CALCULATOR CARD -- */
+.calc-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.calc-header {
+  background: var(--green);
+  padding: 14px 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calc-header .calc-icon { font-size: 20px; }
+.calc-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.calc-body { padding: 18px; }
+
+/* -- AD SLOT — NATIVE BANNER (beside tool) -- */
+.ad-native-wrap {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.ad-native-side {
+  width: 160px;
+  min-width: 160px;
+  display: none;
+}
+@media (min-width: 700px) { .ad-native-side { display: block; } }
+.ad-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  text-align: center;
+}
+.ad-box .ad-label {
+  font-size: 9px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+.ad-main { flex: 1; min-width: 0; }
+
+/* -- FORM ELEMENTS -- */
+.form-group {
+  margin-bottom: 14px;
+}
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color .15s;
+  -webkit-appearance: none;
+}
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* -- BUTTONS -- */
+.btn-calc {
+  width: 100%;
+  padding: 13px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background .15s;
+  margin-top: 4px;
+}
+.btn-calc:hover { background: var(--green-light); }
+
+/* -- RESULTS -- */
+.result-box {
+  display: none;
+  margin-top: 16px;
+  background: var(--green-pale);
+  border: 2px solid var(--green);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+.result-box.show { display: block; }
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,106,78,.15);
+  font-size: 13px;
+}
+.result-row:last-child { border-bottom: none; }
+.result-label { color: var(--text2); font-weight: 500; }
+.result-value { font-weight: 700; color: var(--green); font-size: 14px; }
+.result-value.red { color: var(--red); }
+.result-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* -- ACTION BUTTONS (Smartlink placements) -- */
+.action-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.btn-action {
+  flex: 1;
+  min-width: 120px;
+  padding: 9px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  color: var(--text2);
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all .15s;
+}
+.btn-action:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-pale);
+}
+/* Sponsored label on action buttons */
+.btn-action.sponsored::after {
+  content: " ?";
+  font-size: 10px;
+  opacity: .5;
+}
+
+/* -- AD SLOT — SOCIAL BAR (below results) -- */
+.ad-social-bar {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ad-social-bar .ad-label {
+  font-size: 9px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* -- TOOL SECTIONS (hidden/shown) -- */
+.tool-section { display: none; }
+.tool-section.active { display: block; }
+
+/* -- INFO SECTION -- */
+.info-section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  margin-top: 14px;
+  box-shadow: var(--shadow);
+}
+.info-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--green-pale);
+}
+.info-section p, .info-section li {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+.info-section ul { padding-left: 18px; }
+
+/* -- RELATED TOOLS (forces internal navigation = interstitial fires) -- */
+.related-tools {
+  background: var(--gold-pale);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-top: 14px;
+}
+.related-tools h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.related-link {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  cursor: pointer;
+  transition: all .15s;
+  text-decoration: none;
+}
+.related-link:hover {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+/* -- FOOTER -- */
+.site-footer {
+  background: var(--text);
+  color: rgba(255,255,255,.55);
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.site-footer a { color: rgba(255,255,255,.7); text-decoration: none; }
+.site-footer a:hover { color: #fff; }
+.footer-links { display: flex; gap: 20px; justify-content: center; margin-bottom: 8px; }
+
+/* -- MOBILE STICKY AD -- */
+.ad-sticky-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-top: 2px solid var(--green);
+  padding: 8px 16px;
+  text-align: center;
+  z-index: 40;
+  box-shadow: 0 -4px 12px rgba(0,0,0,.1);
+  display: block;
+}
+.ad-sticky-mobile .ad-label {
+  font-size: 9px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+@media (min-width: 768px) { .ad-sticky-mobile { display: none; } }
+
+/* push body up so sticky ad doesn't cover content */
+body { padding-bottom: 70px; }
+@media (min-width: 768px) { body { padding-bottom: 0; } }
+</style>
+</head>
+
+<body>
+
+<!-- -----------------------
+     SITE HEADER
+------------------------ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">BD<span>Calc</span></a>
+    <span class="header-tagline">Bangladesh's Free Calculator Tools</span>
+  </div>
+</header>
+
+<!-- -----------------------
+     LAYER 6: CLICKADU LEADERBOARD 728×90
+     Desktop only — replace with your Clickadu code
+     Position: Below header, above hero
+------------------------ -->
+<div class="ad-leaderboard">
+  <span class="ad-label">Advertisement</span>
+  <!-- CLICKADU 728x90 START -->
+  <!-- <script async src="//cdn.clickadu.com/banner.js?id={CLICKADU_ZONE_ID}"></script> -->
+  <!-- CLICKADU 728x90 END -->
+  <!-- Fallback visible placeholder (remove when live) -->
+  <div style="width:728px;height:90px;background:#f0f4f8;border:1px dashed #cbd5e0;display:inline-flex;align-items:center;justify-content:center;color:#a0aec0;font-size:11px;border-radius:6px;">728×90 — Clickadu Leaderboard</div>
+</div>
+
+<!-- -----------------------
+     HERO
+------------------------ -->
+<div class="hero">
+  <span class="hero-flag">????</span>
+  <h1>Bangladesh Free Calculator Tools</h1>
+  <p>Salary, VAT, Land, EMI, Age, BMI & more — accurate, fast, and 100% free</p>
+</div>
+
+<!-- -----------------------
+     MAIN CONTENT
+------------------------ -->
+<div class="main-wrap">
+
+  <!-- Tool Selection Grid -->
+  <div class="tool-grid">
+    <button class="tool-btn active" onclick="showTool('salary')" id="btn-salary">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">Salary Calculator</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('vat')" id="btn-vat">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">VAT Calculator</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('land')" id="btn-land">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">Land Measurement</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('emi')" id="btn-emi">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">EMI Calculator</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('age')" id="btn-age">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">Age Calculator</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('bmi')" id="btn-bmi">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">BMI Calculator</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('currency')" id="btn-currency">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">BDT Converter</span>
+    </button>
+    <button class="tool-btn" onclick="showTool('profit')" id="btn-profit">
+      <span class="tool-icon">??</span>
+      <span class="tool-name">Profit/Loss</span>
+    </button>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 1: SALARY CALCULATOR
+  ------------------------------- -->
+  <div class="tool-section active" id="tool-salary">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>Bangladesh Salary Calculator 2026</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+
+          <!-- Adsterra Native Banner 300×250 (desktop sidebar) -->
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <!-- ADSTERRA NATIVE 300x250 START -->
+              <!-- Paste your Adsterra Native Banner code here -->
+              <!-- ADSTERRA NATIVE 300x250 END -->
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+
+          <div class="ad-main">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Basic Salary (BDT/month)</label>
+                <input type="number" id="sal-basic" placeholder="e.g. 25000" min="0">
+              </div>
+              <div class="form-group">
+                <label>House Rent Allowance (BDT)</label>
+                <input type="number" id="sal-hra" placeholder="e.g. 12500" min="0">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Medical Allowance (BDT)</label>
+                <input type="number" id="sal-medical" placeholder="e.g. 1500" min="0">
+              </div>
+              <div class="form-group">
+                <label>Other Allowances (BDT)</label>
+                <input type="number" id="sal-other" placeholder="e.g. 2000" min="0">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Provident Fund %</label>
+                <input type="number" id="sal-pf" placeholder="e.g. 10" min="0" max="20">
+              </div>
+              <div class="form-group">
+                <label>Tax Deduction (BDT)</label>
+                <input type="number" id="sal-tax" placeholder="e.g. 500" min="0">
+              </div>
+            </div>
+            <button class="btn-calc" onclick="calcSalary()">Calculate Take-Home Salary</button>
+
+            <div class="result-box" id="sal-result">
+              <div class="result-title">Salary Breakdown</div>
+              <div class="result-row"><span class="result-label">Basic Salary</span><span class="result-value" id="r-sal-basic">—</span></div>
+              <div class="result-row"><span class="result-label">House Rent Allowance</span><span class="result-value" id="r-sal-hra">—</span></div>
+              <div class="result-row"><span class="result-label">Medical Allowance</span><span class="result-value" id="r-sal-med">—</span></div>
+              <div class="result-row"><span class="result-label">Other Allowances</span><span class="result-value" id="r-sal-other">—</span></div>
+              <div class="result-row"><span class="result-label">Gross Salary</span><span class="result-value" id="r-sal-gross">—</span></div>
+              <div class="result-row"><span class="result-label">Provident Fund (Employee)</span><span class="result-value red" id="r-sal-pf">—</span></div>
+              <div class="result-row"><span class="result-label">Income Tax Deduction</span><span class="result-value red" id="r-sal-tax">—</span></div>
+              <div class="result-row"><span class="result-label">?? Net Take-Home</span><span class="result-value" id="r-sal-net" style="font-size:17px;">—</span></div>
+              <div class="result-row"><span class="result-label">Annual Net Salary</span><span class="result-value" id="r-sal-annual">—</span></div>
+
+              <!-- -- LAYER 5A: Adsterra Direct Link -- -->
+              <div class="action-btns">
+                <a class="btn-action sponsored" id="adsterra-link-salary" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <!-- -- LAYER 5B: Mobidea Smartlink -- -->
+                <a class="btn-action sponsored" id="mobidea-link-salary" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share Result</a>
+                <button class="btn-action" onclick="showTool('vat')">Try VAT Calculator ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- -- LAYER 3B: Adsterra Social Bar -- -->
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <!-- ADSTERRA SOCIAL BAR START -->
+          <!-- Paste your Adsterra Social Bar code here -->
+          <!-- ADSTERRA SOCIAL BAR END -->
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h3>How Bangladesh Salary is Calculated in 2026</h3>
+      <p>In Bangladesh, monthly salary consists of Basic Pay, House Rent Allowance (HRA), Medical Allowance, and other allowances. The standard HRA is typically 50% of basic salary for private sector employees.</p>
+      <ul>
+        <li>Provident Fund: 10% of basic salary (both employee and employer contribute)</li>
+        <li>Income Tax: Applicable if annual income exceeds BDT 3,50,000 (2025-26 threshold)</li>
+        <li>Festival Bonus: Usually 2 Eid bonuses = 2 months basic salary annually</li>
+        <li>Gratuity: Applicable after 5 years of service</li>
+      </ul>
+    </div>
+
+    <!-- Related tools — forces navigation events = PropellerAds Interstitial fires -->
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
+        <span class="related-link" onclick="showTool('emi')">Home Loan EMI</span>
+        <span class="related-link" onclick="showTool('profit')">Business Profit</span>
+        <span class="related-link" onclick="showTool('bmi')">BMI Check</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 2: VAT CALCULATOR
+  ------------------------------- -->
+  <div class="tool-section" id="tool-vat">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>Bangladesh VAT Calculator 2026</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <!-- ADSTERRA NATIVE 300x250 START -->
+              <!-- <script><!-- your adsterra code --></script> -->
+              <!-- ADSTERRA NATIVE 300x250 END -->
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-group">
+              <label>Enter Amount (BDT)</label>
+              <input type="number" id="vat-amount" placeholder="Enter price in BDT" min="0">
+            </div>
+            <div class="form-group">
+              <label>VAT Rate</label>
+              <select id="vat-rate">
+                <option value="15">15% — Standard Rate (General)</option>
+                <option value="7.5">7.5% — Reduced (Services)</option>
+                <option value="5">5% — Reduced (Essential)</option>
+                <option value="10">10% — Truncated Rate</option>
+                <option value="2">2% — Wholesale/Trade</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Calculation Type</label>
+              <select id="vat-type">
+                <option value="exclusive">Add VAT (Price is exclusive)</option>
+                <option value="inclusive">Remove VAT (Price includes VAT)</option>
+              </select>
+            </div>
+            <button class="btn-calc" onclick="calcVAT()">Calculate VAT</button>
+
+            <div class="result-box" id="vat-result">
+              <div class="result-title">VAT Calculation</div>
+              <div class="result-row"><span class="result-label">Original Amount</span><span class="result-value" id="r-vat-original">—</span></div>
+              <div class="result-row"><span class="result-label">VAT Rate Applied</span><span class="result-value" id="r-vat-rate">—</span></div>
+              <div class="result-row"><span class="result-label">VAT Amount</span><span class="result-value red" id="r-vat-amount">—</span></div>
+              <div class="result-row"><span class="result-label">?? Final Amount</span><span class="result-value" id="r-vat-final" style="font-size:17px;">—</span></div>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share Result</a>
+                <button class="btn-action" onclick="showTool('salary')">Try Salary Calculator ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="info-section">
+      <h3>Bangladesh VAT Rates 2025-26</h3>
+      <p>Bangladesh has a standard VAT rate of 15% on most goods and services. The National Board of Revenue (NBR) administers VAT collection under the VAT and SD Act 2012.</p>
+      <ul>
+        <li>Standard Rate: 15% on most goods and services</li>
+        <li>Truncated Rate: 10% on selected services</li>
+        <li>Reduced Rate: 7.5% on certain services like restaurants and software</li>
+        <li>Essential Goods: 5% on specific essential commodities</li>
+        <li>Wholesale/Trade: 2% on certain wholesale transactions</li>
+      </ul>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('profit')">Profit/Loss</span>
+        <span class="related-link" onclick="showTool('currency')">BDT Converter</span>
+        <span class="related-link" onclick="showTool('emi')">EMI Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 3: LAND MEASUREMENT
+  ------------------------------- -->
+  <div class="tool-section" id="tool-land">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>Bangladesh Land Measurement Converter</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Enter Value</label>
+                <input type="number" id="land-value" placeholder="Enter amount" min="0" step="0.001">
+              </div>
+              <div class="form-group">
+                <label>From Unit</label>
+                <select id="land-from">
+                  <option value="katha">Katha (????)</option>
+                  <option value="bigha">Bigha (????)</option>
+                  <option value="decimal">Decimal (?????)</option>
+                  <option value="acre">Acre</option>
+                  <option value="sqft">Square Feet</option>
+                  <option value="sqm">Square Meter</option>
+                  <option value="anashar">Anashar (???-???)</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn-calc" onclick="calcLand()">Convert Land Measurement</button>
+
+            <div class="result-box" id="land-result">
+              <div class="result-title">Conversion Results</div>
+              <div class="result-row"><span class="result-label">Katha (????)</span><span class="result-value" id="r-land-katha">—</span></div>
+              <div class="result-row"><span class="result-label">Bigha (????)</span><span class="result-value" id="r-land-bigha">—</span></div>
+              <div class="result-row"><span class="result-label">Decimal (?????)</span><span class="result-value" id="r-land-decimal">—</span></div>
+              <div class="result-row"><span class="result-label">Acre</span><span class="result-value" id="r-land-acre">—</span></div>
+              <div class="result-row"><span class="result-label">Square Feet</span><span class="result-value" id="r-land-sqft">—</span></div>
+              <div class="result-row"><span class="result-label">Square Meter</span><span class="result-value" id="r-land-sqm">—</span></div>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
+                <button class="btn-action" onclick="showTool('salary')">More Tools ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="info-section">
+      <h3>Bangladesh Land Measurement Units</h3>
+      <p>Bangladesh uses traditional Bengali land measurement units alongside metric units. Understanding conversions is essential for property dealings and land registration.</p>
+      <ul>
+        <li>1 Bigha = 20 Katha = 1,333.33 Square meters (BD standard)</li>
+        <li>1 Katha = 720 Square feet = 66.89 Square meters</li>
+        <li>1 Decimal = 435.6 Square feet = 40.47 Square meters</li>
+        <li>1 Acre = 100 Decimal = 4,047 Square meters</li>
+        <li>1 Bigha = 33 Decimal (approximately)</li>
+      </ul>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('emi')">EMI Calculator</span>
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('currency')">Currency Converter</span>
+        <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 4: EMI CALCULATOR
+  ------------------------------- -->
+  <div class="tool-section" id="tool-emi">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>Bangladesh Loan EMI Calculator</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-group">
+              <label>Loan Amount (BDT)</label>
+              <input type="number" id="emi-principal" placeholder="e.g. 1000000" min="0">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Annual Interest Rate (%)</label>
+                <input type="number" id="emi-rate" placeholder="e.g. 9" min="0" max="30" step="0.1">
+              </div>
+              <div class="form-group">
+                <label>Loan Period (Years)</label>
+                <input type="number" id="emi-years" placeholder="e.g. 10" min="1" max="30">
+              </div>
+            </div>
+            <button class="btn-calc" onclick="calcEMI()">Calculate Monthly EMI</button>
+
+            <div class="result-box" id="emi-result">
+              <div class="result-title">EMI Breakdown</div>
+              <div class="result-row"><span class="result-label">Monthly EMI</span><span class="result-value" id="r-emi-monthly" style="font-size:17px;">—</span></div>
+              <div class="result-row"><span class="result-label">Total Payment</span><span class="result-value" id="r-emi-total">—</span></div>
+              <div class="result-row"><span class="result-label">Principal Amount</span><span class="result-value" id="r-emi-principal">—</span></div>
+              <div class="result-row"><span class="result-label">Total Interest Paid</span><span class="result-value red" id="r-emi-interest">—</span></div>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
+                <button class="btn-action" onclick="showTool('salary')">Salary Calculator ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="info-section">
+      <h3>Bank Loan EMI Rates in Bangladesh 2026</h3>
+      <p>Major banks in Bangladesh offer home loans and personal loans at varying interest rates. The Bangladesh Bank sets the policy rate that influences lending rates.</p>
+      <ul>
+        <li>Home Loan: 9% – 13% per annum (varies by bank)</li>
+        <li>Personal Loan: 10% – 18% per annum</li>
+        <li>Car Loan: 9% – 15% per annum</li>
+        <li>SME Loan: 7% – 12% per annum</li>
+        <li>EMI = [P × R × (1+R)^N] / [(1+R)^N – 1]</li>
+      </ul>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('land')">Land Calculator</span>
+        <span class="related-link" onclick="showTool('profit')">Profit Calculator</span>
+        <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 5: AGE CALCULATOR
+  ------------------------------- -->
+  <div class="tool-section" id="tool-age">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>Age Calculator Bangladesh</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="date" id="age-dob" max="">
+            </div>
+            <div class="form-group">
+              <label>Calculate Age As Of</label>
+              <input type="date" id="age-today">
+            </div>
+            <button class="btn-calc" onclick="calcAge()">Calculate Exact Age</button>
+
+            <div class="result-box" id="age-result">
+              <div class="result-title">Your Exact Age</div>
+              <div class="result-row"><span class="result-label">Age in Years</span><span class="result-value" id="r-age-years" style="font-size:17px;">—</span></div>
+              <div class="result-row"><span class="result-label">Age in Months</span><span class="result-value" id="r-age-months">—</span></div>
+              <div class="result-row"><span class="result-label">Age in Days</span><span class="result-value" id="r-age-days">—</span></div>
+              <div class="result-row"><span class="result-label">Next Birthday In</span><span class="result-value" id="r-age-next">—</span></div>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
+                <button class="btn-action" onclick="showTool('bmi')">Check BMI ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('bmi')">BMI Calculator</span>
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('emi')">EMI Calculator</span>
+        <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 6: BMI CALCULATOR
+  ------------------------------- -->
+  <div class="tool-section" id="tool-bmi">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>BMI Calculator</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Weight (kg)</label>
+                <input type="number" id="bmi-weight" placeholder="e.g. 65" min="1" max="300" step="0.1">
+              </div>
+              <div class="form-group">
+                <label>Height (cm)</label>
+                <input type="number" id="bmi-height" placeholder="e.g. 170" min="50" max="250">
+              </div>
+            </div>
+            <button class="btn-calc" onclick="calcBMI()">Calculate BMI</button>
+
+            <div class="result-box" id="bmi-result">
+              <div class="result-title">BMI Result</div>
+              <div class="result-row"><span class="result-label">Your BMI</span><span class="result-value" id="r-bmi-value" style="font-size:22px;">—</span></div>
+              <div class="result-row"><span class="result-label">Category</span><span class="result-value" id="r-bmi-cat">—</span></div>
+              <div class="result-row"><span class="result-label">Ideal Weight Range</span><span class="result-value" id="r-bmi-ideal">—</span></div>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
+                <button class="btn-action" onclick="showTool('age')">Age Calculator ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('age')">Age Calculator</span>
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('emi')">EMI Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 7: CURRENCY CONVERTER
+  ------------------------------- -->
+  <div class="tool-section" id="tool-currency">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>BDT Currency Converter</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-group">
+              <label>Amount (BDT)</label>
+              <input type="number" id="cur-amount" placeholder="Enter BDT amount" min="0">
+            </div>
+            <div class="form-group">
+              <label>Convert To</label>
+              <select id="cur-to">
+                <option value="usd">USD — US Dollar</option>
+                <option value="eur">EUR — Euro</option>
+                <option value="gbp">GBP — British Pound</option>
+                <option value="inr">INR — Indian Rupee</option>
+                <option value="aed">AED — UAE Dirham</option>
+                <option value="myr">MYR — Malaysian Ringgit</option>
+                <option value="sar">SAR — Saudi Riyal</option>
+                <option value="sgd">SGD — Singapore Dollar</option>
+              </select>
+            </div>
+            <button class="btn-calc" onclick="calcCurrency()">Convert Currency</button>
+
+            <div class="result-box" id="cur-result">
+              <div class="result-title">Conversion Result (Indicative Rate)</div>
+              <div class="result-row"><span class="result-label">BDT Amount</span><span class="result-value" id="r-cur-bdt">—</span></div>
+              <div class="result-row"><span class="result-label">Exchange Rate</span><span class="result-value" id="r-cur-rate">—</span></div>
+              <div class="result-row"><span class="result-label">?? Converted Amount</span><span class="result-value" id="r-cur-result" style="font-size:17px;">—</span></div>
+              <p style="font-size:11px;color:#718096;margin-top:8px;">* Indicative rates only. Check your bank for actual rates.</p>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
+                <button class="btn-action" onclick="showTool('salary')">Salary Calculator ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
+        <span class="related-link" onclick="showTool('profit')">Profit Calculator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------
+       TOOL 8: PROFIT/LOSS
+  ------------------------------- -->
+  <div class="tool-section" id="tool-profit">
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="calc-icon">??</span>
+        <h2>Business Profit & Loss Calculator</h2>
+      </div>
+      <div class="calc-body">
+        <div class="ad-native-wrap">
+          <div class="ad-native-side">
+            <div class="ad-box">
+              <span class="ad-label">Advertisement</span>
+              <div style="width:160px;height:200px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:6px;">Adsterra<br>300×250</div>
+            </div>
+          </div>
+          <div class="ad-main">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Cost Price (BDT)</label>
+                <input type="number" id="pl-cost" placeholder="e.g. 500" min="0">
+              </div>
+              <div class="form-group">
+                <label>Selling Price (BDT)</label>
+                <input type="number" id="pl-sell" placeholder="e.g. 650" min="0">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Number of Units Sold</label>
+              <input type="number" id="pl-units" placeholder="e.g. 100" min="1" value="1">
+            </div>
+            <button class="btn-calc" onclick="calcProfit()">Calculate Profit/Loss</button>
+
+            <div class="result-box" id="pl-result">
+              <div class="result-title">Profit & Loss Summary</div>
+              <div class="result-row"><span class="result-label">Total Cost</span><span class="result-value red" id="r-pl-cost">—</span></div>
+              <div class="result-row"><span class="result-label">Total Revenue</span><span class="result-value" id="r-pl-revenue">—</span></div>
+              <div class="result-row"><span class="result-label">Profit / Loss</span><span class="result-value" id="r-pl-net" style="font-size:17px;">—</span></div>
+              <div class="result-row"><span class="result-label">Profit Margin</span><span class="result-value" id="r-pl-margin">—</span></div>
+              <div class="result-row"><span class="result-label">Markup %</span><span class="result-value" id="r-pl-markup">—</span></div>
+
+              <div class="action-btns">
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
+                <button class="btn-action" onclick="showTool('vat')">VAT Calculator ?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-social-bar">
+          <span class="ad-label">Sponsored</span>
+          <div style="width:100%;height:36px;background:#f0f4f8;border:1px dashed #cbd5e0;display:flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;">Adsterra Social Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="related-tools">
+      <h4>?? Related Calculators</h4>
+      <div class="related-list">
+        <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
+        <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
+        <span class="related-link" onclick="showTool('emi')">EMI Calculator</span>
+        <span class="related-link" onclick="showTool('currency')">Currency Converter</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end main-wrap -->
+
+<!-- -----------------------
+     MOBILE STICKY AD — Clickadu / PropellerAds
+     Visible on mobile only
+------------------------ -->
+<div class="ad-sticky-mobile">
+  <span class="ad-label">Advertisement</span>
+  <!-- PROPELLERADS / CLICKADU MOBILE STICKY START -->
+  <!-- Replace with your actual sticky mobile banner code -->
+  <!-- PROPELLERADS / CLICKADU MOBILE STICKY END -->
+  <div style="width:320px;height:50px;background:#f0f4f8;border:1px dashed #cbd5e0;display:inline-flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;margin:0 auto;">320×50 Mobile Banner</div>
+</div>
+
+<!-- -----------------------
+     FOOTER
+------------------------ -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div>© 2026 BDCalc — Free Bangladesh Calculator Tools</div>
+  <div style="margin-top:4px;font-size:11px;">Salary · VAT · Land · EMI · Age · BMI · Currency · Profit</div>
+</footer>
+
+<!-- -----------------------------------------------
+     LAYER 2: ADSTERRA POPUNDER
+     Replace with your real Adsterra Popunder code
+     Position: Just before </body> — DO NOT MOVE
+     Fires: Once per user per 24 hours on first click
+     Rule: NEVER install two popunders on one page
+------------------------------------------------ -->
+<!-- ADSTERRA POPUNDER START -->
+<!-- <script async src="//cdn.adsterra.com/js/pop-ad.js?z={ADSTERRA_ZONE_ID}"></script> -->
+<!-- ADSTERRA POPUNDER END -->
+
+<!-- -----------------------------------------------
+     LAYER 4: PROPELLERADS INTERSTITIAL + PUSH SUB
+     Fires: On internal page navigation (showTool clicks)
+     Push Sub: Silent — collects lifetime subscribers
+------------------------------------------------ -->
+<!-- PROPELLERADS INTERSTITIAL START -->
+<!-- <script async src="//cdn.propellerads.com/interstitial.js?id={PROPELLERADS_ZONE_ID}"></script> -->
+<!-- PROPELLERADS INTERSTITIAL END -->
+<!-- PROPELLERADS PUSH SUB START -->
+<!-- <script async src="//cdn.propellerads.com/pushsub.js?id={PROPELLERADS_PUSH_ID}"></script> -->
+<!-- PROPELLERADS PUSH SUB END -->
+
+<!-- -----------------------------------------------
+     JAVASCRIPT — All Calculator Logic
+------------------------------------------------ -->
+<script>
+/* -- TOOL NAVIGATION -- */
+function showTool(name) {
+  // Hide all
+  document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+  // Show selected
+  const section = document.getElementById('tool-' + name);
+  const btn = document.getElementById('btn-' + name);
+  if (section) section.classList.add('active');
+  if (btn) btn.classList.add('active');
+  // Scroll to tool
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // PropellerAds interstitial fires on navigation
+  // (handled automatically by their script on page interaction)
+}
+
+/* -- DIRECT LINK HANDLER --
+   Replace URLs with your actual Adsterra Direct Link + Mobidea Smartlink
+   These are your Layer 5 click-monetization placements             */
+function handleDirectLink(network) {
+  const links = {
+    adsterra: 'https://www.adsterra.com/direct-link/?YOUR_ADSTERRA_DIRECT_LINK_HERE',
+    mobidea:  'https://ml.mobidea.com/r/smartlink/?YOUR_MOBIDEA_SMARTLINK_HERE'
+  };
+  // In production: replace placeholder URLs with your real links
+  // For testing — open link and return false to prevent default
+  if (links[network].includes('YOUR_')) {
+    // Placeholder mode — do nothing visible
+    return false;
+  }
+  window.open(links[network], '_blank', 'noopener');
+  return false;
+}
+
+/* -- FORMAT CURRENCY -- */
+function fmt(n) {
+  return '? ' + Math.round(n).toLocaleString('en-BD');
+}
+function fmtN(n, decimals=2) {
+  return n.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+/* ----------------------
+   TOOL 1: SALARY
+---------------------- */
+function calcSalary() {
+  const basic   = parseFloat(document.getElementById('sal-basic').value) || 0;
+  const hra     = parseFloat(document.getElementById('sal-hra').value) || 0;
+  const medical = parseFloat(document.getElementById('sal-medical').value) || 0;
+  const other   = parseFloat(document.getElementById('sal-other').value) || 0;
+  const pfPct   = parseFloat(document.getElementById('sal-pf').value) || 0;
+  const tax     = parseFloat(document.getElementById('sal-tax').value) || 0;
+
+  if (!basic) { alert('Please enter your basic salary.'); return; }
+
+  const gross   = basic + hra + medical + other;
+  const pf      = (basic * pfPct) / 100;
+  const net     = gross - pf - tax;
+  const annual  = net * 12;
+
+  document.getElementById('r-sal-basic').textContent  = fmt(basic);
+  document.getElementById('r-sal-hra').textContent    = fmt(hra);
+  document.getElementById('r-sal-med').textContent    = fmt(medical);
+  document.getElementById('r-sal-other').textContent  = fmt(other);
+  document.getElementById('r-sal-gross').textContent  = fmt(gross);
+  document.getElementById('r-sal-pf').textContent     = fmt(pf);
+  document.getElementById('r-sal-tax').textContent    = fmt(tax);
+  document.getElementById('r-sal-net').textContent    = fmt(net);
+  document.getElementById('r-sal-annual').textContent = fmt(annual);
+
+  document.getElementById('sal-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 2: VAT
+---------------------- */
+function calcVAT() {
+  const amount  = parseFloat(document.getElementById('vat-amount').value) || 0;
+  const rate    = parseFloat(document.getElementById('vat-rate').value);
+  const type    = document.getElementById('vat-type').value;
+
+  if (!amount) { alert('Please enter an amount.'); return; }
+
+  let original, vatAmt, final;
+  if (type === 'exclusive') {
+    original = amount;
+    vatAmt   = amount * rate / 100;
+    final    = amount + vatAmt;
+  } else {
+    final    = amount;
+    original = amount / (1 + rate / 100);
+    vatAmt   = final - original;
+  }
+
+  document.getElementById('r-vat-original').textContent = fmt(original);
+  document.getElementById('r-vat-rate').textContent     = rate + '%';
+  document.getElementById('r-vat-amount').textContent   = fmt(vatAmt);
+  document.getElementById('r-vat-final').textContent    = fmt(final);
+  document.getElementById('vat-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 3: LAND
+---------------------- */
+// Conversion base: everything ? square feet
+const LAND_TO_SQFT = {
+  katha:   720,
+  bigha:   14400,
+  decimal: 435.6,
+  acre:    43560,
+  sqft:    1,
+  sqm:     10.7639,
+  anashar: 1440
+};
+function calcLand() {
+  const val  = parseFloat(document.getElementById('land-value').value) || 0;
+  const from = document.getElementById('land-from').value;
+
+  if (!val) { alert('Please enter a value.'); return; }
+
+  const sqft = val * LAND_TO_SQFT[from];
+
+  document.getElementById('r-land-katha').textContent   = fmtN(sqft / LAND_TO_SQFT.katha, 4) + ' Katha';
+  document.getElementById('r-land-bigha').textContent   = fmtN(sqft / LAND_TO_SQFT.bigha, 4) + ' Bigha';
+  document.getElementById('r-land-decimal').textContent = fmtN(sqft / LAND_TO_SQFT.decimal, 4) + ' Decimal';
+  document.getElementById('r-land-acre').textContent    = fmtN(sqft / LAND_TO_SQFT.acre, 6) + ' Acre';
+  document.getElementById('r-land-sqft').textContent    = fmtN(sqft, 2) + ' sq ft';
+  document.getElementById('r-land-sqm').textContent     = fmtN(sqft / 10.7639, 2) + ' sq m';
+
+  document.getElementById('land-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 4: EMI
+---------------------- */
+function calcEMI() {
+  const P = parseFloat(document.getElementById('emi-principal').value) || 0;
+  const r = (parseFloat(document.getElementById('emi-rate').value) || 0) / 12 / 100;
+  const n = (parseFloat(document.getElementById('emi-years').value) || 0) * 12;
+
+  if (!P || !r || !n) { alert('Please fill all fields.'); return; }
+
+  const emi      = (P * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
+  const total    = emi * n;
+  const interest = total - P;
+
+  document.getElementById('r-emi-monthly').textContent   = fmt(emi);
+  document.getElementById('r-emi-total').textContent     = fmt(total);
+  document.getElementById('r-emi-principal').textContent = fmt(P);
+  document.getElementById('r-emi-interest').textContent  = fmt(interest);
+
+  document.getElementById('emi-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 5: AGE
+---------------------- */
+// Set default dates
+document.addEventListener('DOMContentLoaded', function() {
+  const today = new Date();
+  const todayStr = today.toISOString().split('T')[0];
+  document.getElementById('age-today').value = todayStr;
+  document.getElementById('age-today').max   = todayStr;
+  document.getElementById('age-dob').max      = todayStr;
+});
+
+function calcAge() {
+  const dob   = new Date(document.getElementById('age-dob').value);
+  const today = new Date(document.getElementById('age-today').value);
+
+  if (!document.getElementById('age-dob').value) { alert('Please enter date of birth.'); return; }
+  if (dob >= today) { alert('Date of birth must be in the past.'); return; }
+
+  let years  = today.getFullYear() - dob.getFullYear();
+  let months = today.getMonth() - dob.getMonth();
+  let days   = today.getDate() - dob.getDate();
+
+  if (days < 0) { months--; days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
+  if (months < 0) { years--; months += 12; }
+
+  const totalDays   = Math.floor((today - dob) / (1000 * 60 * 60 * 24));
+  const totalMonths = years * 12 + months;
+
+  // Next birthday
+  const nextBday = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+  if (nextBday <= today) nextBday.setFullYear(today.getFullYear() + 1);
+  const daysToNext = Math.ceil((nextBday - today) / (1000 * 60 * 60 * 24));
+
+  document.getElementById('r-age-years').textContent  = years + ' years, ' + months + ' months, ' + days + ' days';
+  document.getElementById('r-age-months').textContent = totalMonths.toLocaleString() + ' months';
+  document.getElementById('r-age-days').textContent   = totalDays.toLocaleString() + ' days';
+  document.getElementById('r-age-next').textContent   = daysToNext + ' days';
+
+  document.getElementById('age-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 6: BMI
+---------------------- */
+function calcBMI() {
+  const w = parseFloat(document.getElementById('bmi-weight').value) || 0;
+  const h = parseFloat(document.getElementById('bmi-height').value) / 100 || 0;
+
+  if (!w || !h) { alert('Please enter weight and height.'); return; }
+
+  const bmi = w / (h * h);
+  let cat;
+  if      (bmi < 18.5) cat = '?? Underweight';
+  else if (bmi < 25)   cat = '? Normal Weight';
+  else if (bmi < 30)   cat = '?? Overweight';
+  else                 cat = '?? Obese';
+
+  const idealMin = fmt(18.5 * h * h);
+  const idealMax = fmt(24.9 * h * h);
+
+  document.getElementById('r-bmi-value').textContent = bmi.toFixed(1);
+  document.getElementById('r-bmi-cat').textContent   = cat;
+  document.getElementById('r-bmi-ideal').textContent = idealMin.replace('? ','') + ' – ' + idealMax.replace('? ','') + ' kg';
+
+  document.getElementById('bmi-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 7: CURRENCY
+   Approximate indicative rates — update monthly
+---------------------- */
+const RATES = { usd: 110, eur: 120, gbp: 140, inr: 1.32, aed: 30, myr: 23, sar: 29.5, sgd: 82 };
+const SYMBOLS = { usd: '$', eur: '€', gbp: '£', inr: '?', aed: '?.?', myr: 'RM', sar: '?', sgd: 'S$' };
+
+function calcCurrency() {
+  const bdt  = parseFloat(document.getElementById('cur-amount').value) || 0;
+  const to   = document.getElementById('cur-to').value;
+
+  if (!bdt) { alert('Please enter an amount in BDT.'); return; }
+
+  const rate    = RATES[to];
+  const result  = bdt / rate;
+  const sym     = SYMBOLS[to];
+
+  document.getElementById('r-cur-bdt').textContent    = fmt(bdt);
+  document.getElementById('r-cur-rate').textContent   = '1 ' + to.toUpperCase() + ' ˜ ?' + rate;
+  document.getElementById('r-cur-result').textContent = sym + ' ' + fmtN(result, 2);
+
+  document.getElementById('cur-result').classList.add('show');
+}
+
+/* ----------------------
+   TOOL 8: PROFIT/LOSS
+---------------------- */
+function calcProfit() {
+  const cost  = parseFloat(document.getElementById('pl-cost').value) || 0;
+  const sell  = parseFloat(document.getElementById('pl-sell').value) || 0;
+  const units = parseFloat(document.getElementById('pl-units').value) || 1;
+
+  if (!cost || !sell) { alert('Please enter cost and selling price.'); return; }
+
+  const totalCost    = cost * units;
+  const totalRevenue = sell * units;
+  const net          = totalRevenue - totalCost;
+  const margin       = ((net / totalRevenue) * 100).toFixed(2);
+  const markup       = ((net / totalCost) * 100).toFixed(2);
+
+  const netEl = document.getElementById('r-pl-net');
+  netEl.textContent = fmt(Math.abs(net)) + (net >= 0 ? ' Profit ?' : ' Loss ?');
+  netEl.style.color = net >= 0 ? 'var(--green)' : 'var(--red)';
+
+  document.getElementById('r-pl-cost').textContent    = fmt(totalCost);
+  document.getElementById('r-pl-revenue').textContent = fmt(totalRevenue);
+  document.getElementById('r-pl-margin').textContent  = margin + '%';
+  document.getElementById('r-pl-markup').textContent  = markup + '%';
+
+  document.getElementById('pl-result').classList.add('show');
+}
+</script>
+
+<!-- -----------------------------------------------
+     AD STACK REFERENCE — FOR VA/DEVELOPER
+     ----------------------------------------
+     LAYER 1 — Monetag MultiTag      ? <head>
+     LAYER 2 — Adsterra Popunder     ? before </body>
+     LAYER 3A — Adsterra Native      ? beside each tool (300×250 desktop)
+     LAYER 3B — Adsterra Social Bar  ? below each tool result
+     LAYER 4 — PropellerAds          ? before </body> (interstitial + push sub)
+     LAYER 5A — Adsterra Direct Link ? "Save Result" buttons
+     LAYER 5B — Mobidea Smartlink    ? "Share Result" buttons
+     LAYER 6 — Clickadu 728×90       ? desktop leaderboard (below header)
+     LAYER 6B — Mobile Sticky        ? 320×50 fixed bottom (mobile only)
+
+     REPLACEMENT GUIDE:
+     Search {MONETAG_PUBLISHER_ID}   ? replace with your Monetag ID
+     Search {ADSTERRA_ZONE_ID}       ? replace with your Adsterra popunder zone
+     Search {CLICKADU_ZONE_ID}       ? replace with your Clickadu zone
+     Search {PROPELLERADS_ZONE_ID}   ? replace with your PropellerAds interstitial zone
+     Search {PROPELLERADS_PUSH_ID}   ? replace with your PropellerAds push sub ID
+     Search YOUR_ADSTERRA_DIRECT_LINK_HERE ? replace in handleDirectLink()
+     Search YOUR_MOBIDEA_SMARTLINK_HERE   ? replace in handleDirectLink()
+
+     ADSTERRA NATIVE BANNER (300×250):
+     Replace placeholder div inside .ad-native-side in each tool section
+
+     ADSTERRA SOCIAL BAR:
+     Replace placeholder div inside .ad-social-bar in each tool section
+------------------------------------------------ -->
+<a href="Notepad/about.html">About</a>
+<a href="Notepad/contact.html">Contact Us</a>
+<a href="Notepad/privacy.html">Privcy</a>
+</body>
+</html
