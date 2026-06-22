@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Privacy Policy for BDCalc - How we handle your data and use of third-party advertising.">
-<title>Privacy Policy — BDCalc</title>
+<meta name="description" content="Contact BDCalc - Get in touch with us for feedback, suggestions or support.">
+<title>Contact Us — BDCalc</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--green:#006a4e;--green-light:#e6f4f0;--border:#e2e8f0;--text:#1a202c;--text2:#4a5568;--bg:#f0f4f8;}
@@ -16,16 +16,25 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-
 .logo span{color:#f4a200;}
 .nav a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;margin-left:16px;}
 .nav a:hover{color:#fff;}
-.main-wrap{max-width:760px;margin:0 auto;padding:32px 16px 60px;}
+.main-wrap{max-width:600px;margin:0 auto;padding:32px 16px 60px;}
 .page-title{font-size:26px;font-weight:800;margin-bottom:6px;}
-.page-sub{font-size:13px;color:var(--text2);margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--green-light);}
-.section{background:#fff;border-radius:12px;padding:22px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);}
-.section h2{font-size:15px;font-weight:700;color:var(--green);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--green-light);}
-.section h3{font-size:13.5px;font-weight:700;color:var(--text);margin:12px 0 6px;}
-.section p{font-size:13.5px;color:var(--text2);margin-bottom:9px;}
-.section ul{padding-left:18px;margin-bottom:9px;}
-.section ul li{font-size:13.5px;color:var(--text2);margin-bottom:4px;}
-.highlight-box{background:var(--green-light);border-left:4px solid var(--green);border-radius:6px;padding:12px 14px;margin:10px 0;font-size:13px;color:var(--text2);}
+.page-sub{font-size:13.5px;color:var(--text2);margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--green-light);}
+.contact-card{background:#fff;border-radius:12px;padding:24px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.contact-card h2{font-size:15px;font-weight:700;color:var(--green);margin-bottom:14px;}
+.form-group{margin-bottom:14px;}
+.form-group label{display:block;font-size:11.5px;font-weight:700;color:var(--text2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 13px;border:2px solid var(--border);border-radius:8px;font-size:14px;font-family:'Inter',sans-serif;background:#fff;color:var(--text);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--green);}
+.form-group textarea{height:120px;resize:vertical;}
+.btn-submit{width:100%;padding:13px;background:var(--green);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;margin-top:4px;}
+.btn-submit:hover{background:#008a64;}
+.success-msg{display:none;background:var(--green-light);border:2px solid var(--green);border-radius:8px;padding:14px 16px;font-size:13.5px;color:var(--green);font-weight:600;text-align:center;margin-top:12px;}
+.info-card{background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.info-card h3{font-size:14px;font-weight:700;color:var(--green);margin-bottom:12px;}
+.info-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13.5px;}
+.info-row:last-child{border-bottom:none;}
+.info-row .icon{font-size:18px;width:28px;text-align:center;}
+.info-row a{color:var(--green);text-decoration:none;}
 .site-footer{background:var(--text);color:rgba(255,255,255,.5);text-align:center;padding:20px 16px;font-size:12px;}
 .site-footer a{color:rgba(255,255,255,.65);text-decoration:none;margin:0 10px;}
 </style>
@@ -43,107 +52,58 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-
   </div>
 </header>
 <div class="main-wrap">
-  <div class="page-title">Privacy Policy</div>
-  <div class="page-sub">Last updated: June 2026 · This policy explains how BDCalc handles your information.</div>
+  <div class="page-title">Contact Us</div>
+  <div class="page-sub">Have a suggestion, found an error, or need help? We'd love to hear from you.</div>
 
-  <div class="section">
-    <h2>1. Introduction</h2>
-    <p>Welcome to BDCalc ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data when you visit bdcalc.tools (the "Site").</p>
-    <p>By using our Site, you agree to the collection and use of information as described in this policy.</p>
+  <div class="contact-card">
+    <h2>Send Us a Message</h2>
+    <!-- Replace ACTION_URL with your Formspree endpoint: https://formspree.io/f/YOUR_ID -->
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select name="subject">
+          <option value="suggestion">Tool Suggestion</option>
+          <option value="error">Report an Error</option>
+          <option value="feedback">General Feedback</option>
+          <option value="advertising">Advertising Enquiry</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+      <div class="success-msg" id="success-msg">✅ Message sent! We'll reply within 48 hours.</div>
+    </form>
   </div>
 
-  <div class="section">
-    <h2>2. Information We Collect</h2>
-    <h3>Information You Provide</h3>
-    <p>BDCalc calculators run entirely in your browser. The numbers you enter into our calculators are NOT sent to our servers. All calculations happen locally on your device.</p>
-    <h3>Automatically Collected Information</h3>
-    <p>When you visit our Site, we may automatically collect:</p>
-    <ul>
-      <li>Browser type and version</li>
-      <li>Operating system</li>
-      <li>Pages visited and time spent</li>
-      <li>Referring website</li>
-      <li>IP address (anonymised)</li>
-      <li>Device type (mobile, desktop, tablet)</li>
-    </ul>
-    <p>This information is collected through cookies and third-party analytics tools to help us improve the Site.</p>
-  </div>
-
-  <div class="section">
-    <h2>3. Cookies</h2>
-    <p>BDCalc uses cookies to improve your experience. Cookies are small text files stored on your device. We use the following types of cookies:</p>
-    <ul>
-      <li><strong>Essential Cookies:</strong> Required for the Site to function properly.</li>
-      <li><strong>Analytics Cookies:</strong> Help us understand how visitors use the Site.</li>
-      <li><strong>Advertising Cookies:</strong> Used by our third-party advertising partners (see Section 4).</li>
-    </ul>
-    <p>You can disable cookies in your browser settings, though this may affect Site functionality.</p>
-  </div>
-
-  <div class="section">
-    <h2>4. Third-Party Advertising</h2>
-    <div class="highlight-box">BDCalc displays advertisements served by third-party ad networks. These networks may use cookies and tracking technologies to show you relevant ads.</div>
-    <p>Our advertising partners include:</p>
-    <ul>
-      <li><strong>Adsterra</strong> — adsterra.com — may use cookies and device identifiers for ad targeting. Privacy policy: adsterra.com/privacy-policy</li>
-      <li><strong>Monetag</strong> — monetag.com — may display push notification ads and interstitials. Privacy policy: monetag.com/privacy</li>
-      <li><strong>PropellerAds</strong> — propellerads.com — may serve interstitial and push subscription ads. Privacy policy: propellerads.com/privacy-policy</li>
-      <li><strong>Clickadu</strong> — clickadu.com — may serve banner advertisements. Privacy policy: clickadu.com/privacy</li>
-      <li><strong>Mobidea</strong> — mobidea.com — may serve affiliate offers via smartlink technology. Privacy policy: mobidea.com/privacy-policy</li>
-    </ul>
-    <p>These third parties may collect data about your online activities across different websites to serve you targeted advertisements. We do not control the data collection practices of these third parties.</p>
-    <p>To opt out of interest-based advertising, you may visit: <strong>youronlinechoices.eu</strong> or <strong>optout.aboutads.info</strong></p>
-  </div>
-
-  <div class="section">
-    <h2>5. How We Use Your Information</h2>
-    <p>We use collected information to:</p>
-    <ul>
-      <li>Operate and improve the BDCalc website</li>
-      <li>Analyse traffic patterns and user behaviour</li>
-      <li>Display relevant advertisements</li>
-      <li>Ensure technical functionality and security</li>
-      <li>Comply with legal obligations</li>
-    </ul>
-    <p>We do not sell your personal data to third parties.</p>
-  </div>
-
-  <div class="section">
-    <h2>6. Data Retention</h2>
-    <p>BDCalc does not store calculator inputs on our servers. Anonymous analytics data may be retained for up to 26 months. You may request deletion of any data associated with your use of the Site by contacting us.</p>
-  </div>
-
-  <div class="section">
-    <h2>7. Your Rights</h2>
-    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
-    <ul>
-      <li>Right to access the personal data we hold about you</li>
-      <li>Right to correct inaccurate data</li>
-      <li>Right to request deletion of your data</li>
-      <li>Right to object to processing of your data</li>
-      <li>Right to data portability</li>
-      <li>Right to withdraw consent at any time</li>
-    </ul>
-    <p>To exercise these rights, please contact us using the details in Section 9.</p>
-  </div>
-
-  <div class="section">
-    <h2>8. Children's Privacy</h2>
-    <p>BDCalc is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
-  </div>
-
-  <div class="section">
-    <h2>9. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-    <ul>
-      <li>Email: bdcalctools@gmail.com</li>
-      <li>Website: <a href="contact.html" style="color:var(--green);">Contact Form</a></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>10. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the "Last updated" date at the top of this page. Continued use of the Site after changes constitutes acceptance of the updated policy.</p>
+  <div class="info-card">
+    <h3>Other Ways to Reach Us</h3>
+    <div class="info-row">
+      <span class="icon">📧</span>
+      <span>Email: <a href="mailto:bdcalctools@gmail.com">bdcalctools@gmail.com</a></span>
+    </div>
+    <div class="info-row">
+      <span class="icon">⏰</span>
+      <span>Response time: Within 48 hours</span>
+    </div>
+    <div class="info-row">
+      <span class="icon">🌐</span>
+      <span>Website: <a href="index.html">bdcalc.tools</a></span>
+    </div>
+    <div class="info-row">
+      <span class="icon">📍</span>
+      <span>Serving users across Bangladesh</span>
+    </div>
   </div>
 </div>
 <footer class="site-footer">
@@ -155,5 +115,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-
   </div>
   © 2026 BDCalc — Free Bangladesh Calculator Tools
 </footer>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  if (this.action.includes('YOUR_FORMSPREE_ID')) {
+    e.preventDefault();
+    document.getElementById('success-msg').style.display = 'block';
+  }
+});
+</script>
 </body>
 </html>
