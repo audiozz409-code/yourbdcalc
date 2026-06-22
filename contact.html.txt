@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Privacy Policy for BDCalc - How we handle your data and use of third-party advertising.">
+<title>Privacy Policy — BDCalc</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#006a4e;--green-light:#e6f4f0;--border:#e2e8f0;--text:#1a202c;--text2:#4a5568;--bg:#f0f4f8;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.7;}
+.site-header{background:var(--green);padding:0 16px;}
+.header-inner{max-width:960px;margin:0 auto;height:52px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-size:20px;font-weight:800;color:#fff;text-decoration:none;}
+.logo span{color:#f4a200;}
+.nav a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;margin-left:16px;}
+.nav a:hover{color:#fff;}
+.main-wrap{max-width:760px;margin:0 auto;padding:32px 16px 60px;}
+.page-title{font-size:26px;font-weight:800;margin-bottom:6px;}
+.page-sub{font-size:13px;color:var(--text2);margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--green-light);}
+.section{background:#fff;border-radius:12px;padding:22px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.section h2{font-size:15px;font-weight:700;color:var(--green);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--green-light);}
+.section h3{font-size:13.5px;font-weight:700;color:var(--text);margin:12px 0 6px;}
+.section p{font-size:13.5px;color:var(--text2);margin-bottom:9px;}
+.section ul{padding-left:18px;margin-bottom:9px;}
+.section ul li{font-size:13.5px;color:var(--text2);margin-bottom:4px;}
+.highlight-box{background:var(--green-light);border-left:4px solid var(--green);border-radius:6px;padding:12px 14px;margin:10px 0;font-size:13px;color:var(--text2);}
+.site-footer{background:var(--text);color:rgba(255,255,255,.5);text-align:center;padding:20px 16px;font-size:12px;}
+.site-footer a{color:rgba(255,255,255,.65);text-decoration:none;margin:0 10px;}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">BD<span>Calc</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<div class="main-wrap">
+  <div class="page-title">Privacy Policy</div>
+  <div class="page-sub">Last updated: June 2026 · This policy explains how BDCalc handles your information.</div>
+
+  <div class="section">
+    <h2>1. Introduction</h2>
+    <p>Welcome to BDCalc ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data when you visit bdcalc.tools (the "Site").</p>
+    <p>By using our Site, you agree to the collection and use of information as described in this policy.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Information We Collect</h2>
+    <h3>Information You Provide</h3>
+    <p>BDCalc calculators run entirely in your browser. The numbers you enter into our calculators are NOT sent to our servers. All calculations happen locally on your device.</p>
+    <h3>Automatically Collected Information</h3>
+    <p>When you visit our Site, we may automatically collect:</p>
+    <ul>
+      <li>Browser type and version</li>
+      <li>Operating system</li>
+      <li>Pages visited and time spent</li>
+      <li>Referring website</li>
+      <li>IP address (anonymised)</li>
+      <li>Device type (mobile, desktop, tablet)</li>
+    </ul>
+    <p>This information is collected through cookies and third-party analytics tools to help us improve the Site.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Cookies</h2>
+    <p>BDCalc uses cookies to improve your experience. Cookies are small text files stored on your device. We use the following types of cookies:</p>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Required for the Site to function properly.</li>
+      <li><strong>Analytics Cookies:</strong> Help us understand how visitors use the Site.</li>
+      <li><strong>Advertising Cookies:</strong> Used by our third-party advertising partners (see Section 4).</li>
+    </ul>
+    <p>You can disable cookies in your browser settings, though this may affect Site functionality.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Third-Party Advertising</h2>
+    <div class="highlight-box">BDCalc displays advertisements served by third-party ad networks. These networks may use cookies and tracking technologies to show you relevant ads.</div>
+    <p>Our advertising partners include:</p>
+    <ul>
+      <li><strong>Adsterra</strong> — adsterra.com — may use cookies and device identifiers for ad targeting. Privacy policy: adsterra.com/privacy-policy</li>
+      <li><strong>Monetag</strong> — monetag.com — may display push notification ads and interstitials. Privacy policy: monetag.com/privacy</li>
+      <li><strong>PropellerAds</strong> — propellerads.com — may serve interstitial and push subscription ads. Privacy policy: propellerads.com/privacy-policy</li>
+      <li><strong>Clickadu</strong> — clickadu.com — may serve banner advertisements. Privacy policy: clickadu.com/privacy</li>
+      <li><strong>Mobidea</strong> — mobidea.com — may serve affiliate offers via smartlink technology. Privacy policy: mobidea.com/privacy-policy</li>
+    </ul>
+    <p>These third parties may collect data about your online activities across different websites to serve you targeted advertisements. We do not control the data collection practices of these third parties.</p>
+    <p>To opt out of interest-based advertising, you may visit: <strong>youronlinechoices.eu</strong> or <strong>optout.aboutads.info</strong></p>
+  </div>
+
+  <div class="section">
+    <h2>5. How We Use Your Information</h2>
+    <p>We use collected information to:</p>
+    <ul>
+      <li>Operate and improve the BDCalc website</li>
+      <li>Analyse traffic patterns and user behaviour</li>
+      <li>Display relevant advertisements</li>
+      <li>Ensure technical functionality and security</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <p>We do not sell your personal data to third parties.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Data Retention</h2>
+    <p>BDCalc does not store calculator inputs on our servers. Anonymous analytics data may be retained for up to 26 months. You may request deletion of any data associated with your use of the Site by contacting us.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li>Right to access the personal data we hold about you</li>
+      <li>Right to correct inaccurate data</li>
+      <li>Right to request deletion of your data</li>
+      <li>Right to object to processing of your data</li>
+      <li>Right to data portability</li>
+      <li>Right to withdraw consent at any time</li>
+    </ul>
+    <p>To exercise these rights, please contact us using the details in Section 9.</p>
+  </div>
+
+  <div class="section">
+    <h2>8. Children's Privacy</h2>
+    <p>BDCalc is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+  </div>
+
+  <div class="section">
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+    <ul>
+      <li>Email: bdcalctools@gmail.com</li>
+      <li>Website: <a href="contact.html" style="color:var(--green);">Contact Form</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the "Last updated" date at the top of this page. Continued use of the Site after changes constitutes acceptance of the updated policy.</p>
+  </div>
+</div>
+<footer class="site-footer">
+  <div style="margin-bottom:8px;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  © 2026 BDCalc — Free Bangladesh Calculator Tools
+</footer>
+</body>
+</html>
