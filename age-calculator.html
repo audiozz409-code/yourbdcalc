@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Age Calculator Bangladesh - Free Online Tool</title>
+
+<meta name="description"
+content="Calculate your exact age in years, months and days instantly with our free Age Calculator.">
+
+</head>
+
+<body>
+
+<h1>Age Calculator</h1>
+
+<input type="date" id="dob">
+
+<button onclick="calcAge()">
+Calculate Age
+</button>
+
+<p id="result"></p>
+
+<script>
+function calcAge(){
+
+let dob =
+new Date(document.getElementById("dob").value);
+
+let today = new Date();
+
+let age =
+today.getFullYear() -
+dob.getFullYear();
+
+document.getElementById("result").innerHTML =
+"Your Age: " + age + " Years";
+
+}
+</script>
+
+</body>
+</html>
