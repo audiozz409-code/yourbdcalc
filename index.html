@@ -766,9 +766,9 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label"> Final Amount</span><span class="result-value" id="r-vat-final" style="font-size:17px;">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">💾 Save Result </a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">📤 Share Result</a>
-                <button class="btn-action" onclick="showTool('salary')">Try Salary Calculator ?</button>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener"> Save Result </a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> Share Result</a>
+                <button class="btn-action" onclick="showTool('salary')">Try Salary Calculator </button>
               </div>
             </div>
           </div>
@@ -1350,28 +1350,47 @@ const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
 /* ----------------------
    TOOL 2: VAT
 ---------------------- */
+function fmt(num) {
+  return 'BDT ' + Number(num).toLocaleString('en-BD', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
 function calcVAT() {
-  const amount  = parseFloat(document.getElementById('vat-amount').value) || 0;
-  const rate    = parseFloat(document.getElementById('vat-rate').value);
-  const type    = document.getElementById('vat-type').value;
 
-  if (!amount) { alert('Please enter an amount.'); return; }
+  const amount = parseFloat(document.getElementById('vat-amount').value) || 0;
+  const rate = parseFloat(document.getElementById('vat-rate').value) || 0;
+  const type = document.getElementById('vat-type').value;
 
-  let original, vatAmt, final;
+  if (!amount || amount <= 0) {
+    alert('Please enter a valid amount');
+    return;
+  }
+
+  let original = 0;
+  let vatAmt = 0;
+  let final = 0;
+
   if (type === 'exclusive') {
+
     original = amount;
-    vatAmt   = amount * rate / 100;
-    final    = amount + vatAmt;
+    vatAmt = (amount * rate) / 100;
+    final = amount + vatAmt;
+
   } else {
-    final    = amount;
+
+    final = amount;
     original = amount / (1 + rate / 100);
-    vatAmt   = final - original;
+    vatAmt = final - original;
+
   }
 
   document.getElementById('r-vat-original').textContent = fmt(original);
-  document.getElementById('r-vat-rate').textContent     = rate + '%';
-  document.getElementById('r-vat-amount').textContent   = fmt(vatAmt);
-  document.getElementById('r-vat-final').textContent    = fmt(final);
+  document.getElementById('r-vat-rate').textContent = rate + '%';
+  document.getElementById('r-vat-amount').textContent = fmt(vatAmt);
+  document.getElementById('r-vat-final').textContent = fmt(final);
+
   document.getElementById('vat-result').classList.add('show');
 }
 
