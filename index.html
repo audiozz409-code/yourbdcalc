@@ -663,7 +663,10 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Gross Salary</span><span class="result-value" id="r-sal-gross">—</span></div>
               <div class="result-row"><span class="result-label">Provident Fund (Employee)</span><span class="result-value red" id="r-sal-pf">—</span></div>
               <div class="result-row"><span class="result-label">Income Tax Deduction</span><span class="result-value red" id="r-sal-tax">—</span></div>
-              <div class="result-row"><span class="result-label">?? Net Take-Home</span><span class="result-value" id="r-sal-net" style="font-size:17px;">—</span></div>
+             <div class="result-row">
+              <span class="result-label">💰 Net Take-Home</span>
+               <span class="result-value" id="r-sal-net" style="font-size:17px;">—</span>
+              </div>
               <div class="result-row"><span class="result-label">Annual Net Salary</span><span class="result-value" id="r-sal-annual">—</span></div>
 
               <!-- -- LAYER 5A: Adsterra Direct Link -- -->
@@ -1312,31 +1315,39 @@ function fmtN(n, decimals=2) {
    TOOL 1: SALARY
 ---------------------- */
 function calcSalary() {
-  const basic   = parseFloat(document.getElementById('sal-basic').value) || 0;
-  const hra     = parseFloat(document.getElementById('sal-hra').value) || 0;
+
+  const basic = parseFloat(document.getElementById('sal-basic').value) || 0;
+  const hra = parseFloat(document.getElementById('sal-hra').value) || 0;
   const medical = parseFloat(document.getElementById('sal-medical').value) || 0;
-  const other   = parseFloat(document.getElementById('sal-other').value) || 0;
-  const pfPct   = parseFloat(document.getElementById('sal-pf').value) || 0;
-  const tax     = parseFloat(document.getElementById('sal-tax').value) || 0;
+  const other = parseFloat(document.getElementById('sal-other').value) || 0;
+  const pfPct = parseFloat(document.getElementById('sal-pf').value) || 0;
+  const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
 
-  if (!basic) { alert('Please enter your basic salary.'); return; }
+  if (!basic) {
+    alert('Please enter basic salary');
+    return;
+  }
 
-  const gross   = basic + hra + medical + other;
-  const pf      = (basic * pfPct) / 100;
-  const net     = gross - pf - tax;
-  const annual  = net * 12;
+  const gross = basic + hra + medical + other;
 
-  document.getElementById('r-sal-basic').textContent  = fmt(basic);
-  document.getElementById('r-sal-hra').textContent    = fmt(hra);
-  document.getElementById('r-sal-med').textContent    = fmt(medical);
-  document.getElementById('r-sal-other').textContent  = fmt(other);
-  document.getElementById('r-sal-gross').textContent  = fmt(gross);
-  document.getElementById('r-sal-pf').textContent     = fmt(pf);
-  document.getElementById('r-sal-tax').textContent    = fmt(tax);
-  document.getElementById('r-sal-net').textContent    = fmt(net);
-  document.getElementById('r-sal-annual').textContent = fmt(annual);
+  // PF percentage based
+  const pf = (basic * pfPct) / 100;
 
-  document.getElementById('sal-result').classList.add('show');
+  const net = gross - pf - tax;
+  const annual = net * 12;
+
+  document.getElementById('r-sal-basic').innerText = basic;
+  document.getElementById('r-sal-hra').innerText = hra;
+  document.getElementById('r-sal-med').innerText = medical;
+  document.getElementById('r-sal-other').innerText = other;
+  document.getElementById('r-sal-gross').innerText = gross;
+  document.getElementById('r-sal-pf').innerText = pf;
+  document.getElementById('r-sal-tax').innerText = tax;
+  document.getElementById('r-sal-net').innerText = net;
+  document.getElementById('r-sal-annual').innerText = annual;
+ 
+ 
+ document.getElementById('sal-result').classList.add('show');
 }
 
 /* ----------------------
