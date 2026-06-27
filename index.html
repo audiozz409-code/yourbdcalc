@@ -1330,9 +1330,6 @@ const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
 
   // PF percentage based
  const gross = basic + hra + medical + other;
-
-  const pf = parseFloat(document.getElementById('sal-pf').value) || 0;
-
  const net = gross - pf - tax;
  const annual = net * 12;
  
