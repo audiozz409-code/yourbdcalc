@@ -1123,9 +1123,9 @@ body { padding-bottom: 70px; }
               <p style="font-size:11px;color:#718096;margin-top:8px;">* Indicative rates only. Check your bank for actual rates.</p>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
-                <button class="btn-action" onclick="showTool('salary')">Salary Calculator ?</button>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener"> Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> Share</a>
+                <button class="btn-action" onclick="showTool('salary')">Salary Calculator </button>
               </div>
             </div>
           </div>
@@ -1152,7 +1152,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-profit">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon">??</span>
+        <span class="calc-icon"></span>
         <h2>Business Profit & Loss Calculator</h2>
       </div>
       <div class="calc-body">
@@ -1189,9 +1189,9 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Markup %</span><span class="result-value" id="r-pl-markup">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? Save Result</a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
-                <button class="btn-action" onclick="showTool('vat')">VAT Calculator ?</button>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener"> Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> Share</a>
+                <button class="btn-action" onclick="showTool('vat')">VAT Calculator </button>
               </div>
             </div>
           </div>
@@ -1544,24 +1544,24 @@ function calcProfit() {
 <!-- -----------------------------------------------
      AD STACK REFERENCE — FOR VA/DEVELOPER
      ----------------------------------------
-     LAYER 1 — Monetag MultiTag      ? <head>
-     LAYER 2 — Adsterra Popunder     ? before </body>
-     LAYER 3A — Adsterra Native      ? beside each tool (300×250 desktop)
-     LAYER 3B — Adsterra Social Bar  ? below each tool result
-     LAYER 4 — PropellerAds          ? before </body> (interstitial + push sub)
-     LAYER 5A — Adsterra Direct Link ? "Save Result" buttons
-     LAYER 5B — Mobidea Smartlink    ? "Share Result" buttons
-     LAYER 6 — Clickadu 728×90       ? desktop leaderboard (below header)
-     LAYER 6B — Mobile Sticky        ? 320×50 fixed bottom (mobile only)
+     LAYER 1 — Monetag MultiTag       <head>
+     LAYER 2 — Adsterra Popunder      before </body>
+     LAYER 3A — Adsterra Native       beside each tool (300×250 desktop)
+     LAYER 3B — Adsterra Social Bar   below each tool result
+     LAYER 4 — PropellerAds           before </body> (interstitial + push sub)
+     LAYER 5A — Adsterra Direct Link  "Save Result" buttons
+     LAYER 5B — Mobidea Smartlink     "Share Result" buttons
+     LAYER 6 — Clickadu 728×90        desktop leaderboard (below header)
+     LAYER 6B — Mobile Sticky         320×50 fixed bottom (mobile only)
 
      REPLACEMENT GUIDE:
-     Search {MONETAG_PUBLISHER_ID}   ? replace with your Monetag ID
-     Search {ADSTERRA_ZONE_ID}       ? replace with your Adsterra popunder zone
-     Search {CLICKADU_ZONE_ID}       ? replace with your Clickadu zone
-     Search {PROPELLERADS_ZONE_ID}   ? replace with your PropellerAds interstitial zone
-     Search {PROPELLERADS_PUSH_ID}   ? replace with your PropellerAds push sub ID
-     Search YOUR_ADSTERRA_DIRECT_LINK_HERE ? replace in handleDirectLink()
-     Search YOUR_MOBIDEA_SMARTLINK_HERE   ? replace in handleDirectLink()
+     Search {MONETAG_PUBLISHER_ID}    replace with your Monetag ID
+     Search {ADSTERRA_ZONE_ID}        replace with your Adsterra popunder zone
+     Search {CLICKADU_ZONE_ID}        replace with your Clickadu zone
+     Search {PROPELLERADS_ZONE_ID}    replace with your PropellerAds interstitial zone
+     Search {PROPELLERADS_PUSH_ID}    replace with your PropellerAds push sub ID
+     Search YOUR_ADSTERRA_DIRECT_LINK_HERE  replace in handleDirectLink()
+     Search YOUR_MOBIDEA_SMARTLINK_HERE    replace in handleDirectLink()
 
      ADSTERRA NATIVE BANNER (300×250):
      Replace placeholder div inside .ad-native-side in each tool section
