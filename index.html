@@ -1316,26 +1316,26 @@ function fmtN(n, decimals=2) {
 ---------------------- */
 function calcSalary() {
 
-  const basic = parseFloat(document.getElementById('sal-basic').value) || 0;
-  const hra = parseFloat(document.getElementById('sal-hra').value) || 0;
-  const medical = parseFloat(document.getElementById('sal-medical').value) || 0;
-  const other = parseFloat(document.getElementById('sal-other').value) || 0;
-  const pfPct = parseFloat(document.getElementById('sal-pf').value) || 0;
-  const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
+const basic = parseFloat(document.getElementById('sal-basic').value) || 0;
+const hra = parseFloat(document.getElementById('sal-hra').value) || 0;
+const medical = parseFloat(document.getElementById('sal-medical').value) || 0;
+const other = parseFloat(document.getElementById('sal-other').value) || 0;
+const pf = parseFloat(document.getElementById('sal-pf').value) || 0;
+const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
 
   if (!basic) {
     alert('Please enter basic salary');
     return;
   }
 
-  const gross = basic + hra + medical + other;
-
   // PF percentage based
-  const pf = (basic * pfPct) / 100;
+ const gross = basic + hra + medical + other;
 
-  const net = gross - pf - tax;
-  const annual = net * 12;
+  const pf = parseFloat(document.getElementById('sal-pf').value) || 0;
 
+ const net = gross - pf - tax;
+ const annual = net * 12;
+ 
   document.getElementById('r-sal-basic').innerText = basic;
   document.getElementById('r-sal-hra').innerText = hra;
   document.getElementById('r-sal-med').innerText = medical;
