@@ -1483,7 +1483,7 @@ function calcBMI() {
 
   document.getElementById('r-bmi-value').textContent = bmi.toFixed(1);
   document.getElementById('r-bmi-cat').textContent   = cat;
-  document.getElementById('r-bmi-ideal').textContent = idealMin.replace('? ','') + ' – ' + idealMax.replace('? ','') + ' kg';
+  document.getElementById('r-bmi-ideal').textContent = idealMin.replace(' ','') + ' – ' + idealMax.replace(' ','') + ' kg';
 
   document.getElementById('bmi-result').classList.add('show');
 }
