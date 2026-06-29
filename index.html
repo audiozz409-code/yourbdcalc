@@ -7,12 +7,12 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
 <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+      href="https://fonts.googleapis.com/css2family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 </noscript>
      <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXWD0N9KFM"></script>
@@ -43,7 +43,7 @@
      Position: First script in <head>
 ------------------------------------------------ -->
 <!-- MONETAG MULTITAG START -->
-<!-- <script src="//cdn.monetag.com/multitag.js?z={MONETAG_PUBLISHER_ID}" async></script> -->
+<!-- <script src="//cdn.monetag.com/multitag.jsz={MONETAG_PUBLISHER_ID}" async></script> -->
 <!-- MONETAG MULTITAG END -->
 
 <style>
@@ -674,7 +674,7 @@ body { padding-bottom: 70px; }
                 <a class="btn-action sponsored" id="adsterra-link-salary" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">💾 Save Result </a>
                 <!-- -- LAYER 5B: Mobidea Smartlink -- -->
                 <a class="btn-action sponsored" id="mobidea-link-salary" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">📤 Share Result</a>
-                <button class="btn-action" onclick="showTool('vat')">Try VAT Calculator ?</button>
+                <button class="btn-action" onclick="showTool('vat')">Try VAT Calculator </button>
               </div>
             </div>
           </div>
@@ -997,9 +997,9 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Next Birthday In</span><span class="result-value" id="r-age-next">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? </a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
-                <button class="btn-action" onclick="showTool('bmi')">Check BMI ?</button>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">>💾 Save Result</a> </a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> 📤 Share Result </a>
+                <button class="btn-action" onclick="showTool('bmi')">Check BMI </button>
               </div>
             </div>
           </div>
@@ -1058,9 +1058,9 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Ideal Weight Range</span><span class="result-value" id="r-bmi-ideal">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? </a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
-                <button class="btn-action" onclick="showTool('age')">Age Calculator ?</button>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">📤 Share Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">📤 Share Result</a>
+                <button class="btn-action" onclick="showTool('age')">Age Calculator</button>
               </div>
             </div>
           </div>
@@ -1122,7 +1122,7 @@ body { padding-bottom: 70px; }
               <div class="result-title">Conversion Result (Indicative Rate)</div>
               <div class="result-row"><span class="result-label">BDT Amount</span><span class="result-value" id="r-cur-bdt">—</span></div>
               <div class="result-row"><span class="result-label">Exchange Rate</span><span class="result-value" id="r-cur-rate">—</span></div>
-              <div class="result-row"><span class="result-label">?? Converted Amount</span><span class="result-value" id="r-cur-result" style="font-size:17px;">—</span></div>
+              <div class="result-row"><span class="result-label"> Converted Amount</span><span class="result-value" id="r-cur-result" style="font-size:17px;">—</span></div>
               <p style="font-size:11px;color:#718096;margin-top:8px;">* Indicative rates only. Check your bank for actual rates.</p>
 
               <div class="action-btns">
@@ -1396,7 +1396,7 @@ function calcVAT() {
 /* ----------------------
    TOOL 3: LAND
 ---------------------- */
-// Conversion base: everything ? square feet
+// Conversion base: everything square feet
 const LAND_TO_SQFT = {
   katha:   720,
   bigha:   14400,
@@ -1508,10 +1508,10 @@ function calcBMI() {
 
   const bmi = w / (h * h);
   let cat;
-  if      (bmi < 18.5) cat = '?? Underweight';
-  else if (bmi < 25)   cat = '? Normal Weight';
-  else if (bmi < 30)   cat = '?? Overweight';
-  else                 cat = '?? Obese';
+  if      (bmi < 18.5) cat = ' Underweight';
+  else if (bmi < 25)   cat = ' Normal Weight';
+  else if (bmi < 30)   cat = ' Overweight';
+  else                 cat = ' Obese';
 
   const idealMin = fmt(18.5 * h * h);
   const idealMax = fmt(24.9 * h * h);
@@ -1528,7 +1528,16 @@ function calcBMI() {
    Approximate indicative rates — update monthly
 ---------------------- */
 const RATES = { usd: 110, eur: 120, gbp: 140, inr: 1.32, aed: 30, myr: 23, sar: 29.5, sgd: 82 };
-const SYMBOLS = { usd: '$', eur: '€', gbp: '£', inr: '?', aed: '?.?', myr: 'RM', sar: '?', sgd: 'S$' };
+const SYMBOLS = {
+  usd:'$',
+  eur:'€',
+  gbp:'£',
+  inr:'₹',
+  aed:'AED',
+  myr:'RM',
+  sar:'SAR',
+  sgd:'S$'
+}
 
 function calcCurrency() {
   const bdt  = parseFloat(document.getElementById('cur-amount').value) || 0;
@@ -1541,7 +1550,7 @@ function calcCurrency() {
   const sym     = SYMBOLS[to];
 
   document.getElementById('r-cur-bdt').textContent    = fmt(bdt);
-  document.getElementById('r-cur-rate').textContent   = '1 ' + to.toUpperCase() + ' ˜ ?' + rate;
+  document.getElementById('r-cur-rate').textContent   = '1 ' + to.toUpperCase() + ' ˜ ' + rate;
   document.getElementById('r-cur-result').textContent = sym + ' ' + fmtN(result, 2);
 
   document.getElementById('cur-result').classList.add('show');
@@ -1564,8 +1573,8 @@ function calcProfit() {
   const markup       = ((net / totalCost) * 100).toFixed(2);
 
   const netEl = document.getElementById('r-pl-net');
-  netEl.textContent = fmt(Math.abs(net)) + (net >= 0 ? ' Profit ?' : ' Loss ?');
-  netEl.style.color = net >= 0 ? 'var(--green)' : 'var(--red)';
+ netEl.textContent = fmt(Math.abs(net)) + (net >= 0  ' Profit' : ' Loss');
+  netEl.style.color = net >= 0  'var(--green)' : 'var(--red)';
 
   document.getElementById('r-pl-cost').textContent    = fmt(totalCost);
   document.getElementById('r-pl-revenue').textContent = fmt(totalRevenue);
