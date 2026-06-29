@@ -1305,16 +1305,14 @@ function handleDirectLink(network) {
 
 /* -- FORMAT CURRENCY -- */
 function fmt(n) {
-  return '? ' + Math.round(n).toLocaleString('en-BD');
-}
-function fmtN(n, decimals=2) {
-  return n.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-}
- function fmt(num) {
-  return 'BDT ' + Number(num).toLocaleString('en-BD', {
+  return 'BDT ' + Number(n).toLocaleString('en-BD', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   });
+}
+
+function fmtN(n, decimals = 2) {
+  return Number(n).toFixed(decimals);
 }
 
 
