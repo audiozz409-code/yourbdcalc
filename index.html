@@ -926,9 +926,9 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Total Interest Paid</span><span class="result-value red" id="r-emi-interest">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">?? </a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">?? Share</a>
-                <button class="btn-action" onclick="showTool('salary')">Salary Calculator ?</button>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">Share Result</a>
+                <button class="btn-action" onclick="showTool('salary')">Try Salary Calculator</button>
               </div>
             </div>
           </div>
@@ -1310,6 +1310,13 @@ function fmt(n) {
 function fmtN(n, decimals=2) {
   return n.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+ function fmt(num) {
+  return 'BDT ' + Number(num).toLocaleString('en-BD', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
 
 /* ----------------------
    TOOL 1: SALARY
@@ -1350,12 +1357,6 @@ const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
 /* ----------------------
    TOOL 2: VAT
 ---------------------- */
-function fmt(num) {
-  return 'BDT ' + Number(num).toLocaleString('en-BD', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-}
 
 function calcVAT() {
 
@@ -1429,24 +1430,33 @@ function calcLand() {
    TOOL 4: EMI
 ---------------------- */
 function calcEMI() {
+
   const P = parseFloat(document.getElementById('emi-principal').value) || 0;
-  const r = (parseFloat(document.getElementById('emi-rate').value) || 0) / 12 / 100;
-  const n = (parseFloat(document.getElementById('emi-years').value) || 0) * 12;
+  const annualRate = parseFloat(document.getElementById('emi-rate').value) || 0;
+  const years = parseFloat(document.getElementById('emi-years').value) || 0;
 
-  if (!P || !r || !n) { alert('Please fill all fields.'); return; }
+  if (P <= 0 || annualRate <= 0 || years <= 0) {
+    alert("Please fill all fields correctly.");
+    return;
+  }
 
-  const emi      = (P * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
-  const total    = emi * n;
+  const r = annualRate / 12 / 100;
+  const n = years * 12;
+
+  const emi = (P * r * Math.pow(1 + r, n)) /
+              (Math.pow(1 + r, n) - 1);
+
+  const total = emi * n;
   const interest = total - P;
 
-  document.getElementById('r-emi-monthly').textContent   = fmt(emi);
-  document.getElementById('r-emi-total').textContent     = fmt(total);
-  document.getElementById('r-emi-principal').textContent = fmt(P);
-  document.getElementById('r-emi-interest').textContent  = fmt(interest);
+  document.getElementById("r-emi-monthly").textContent = fmt(emi);
+  document.getElementById("r-emi-total").textContent = fmt(total);
+  document.getElementById("r-emi-principal").textContent = fmt(P);
+  document.getElementById("r-emi-interest").textContent = fmt(interest);
 
-  document.getElementById('emi-result').classList.add('show');
+  document.getElementById("emi-result").classList.add("show");
+
 }
-
 /* ----------------------
    TOOL 5: AGE
 ---------------------- */
