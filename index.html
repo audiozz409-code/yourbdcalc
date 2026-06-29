@@ -372,11 +372,10 @@ body {
 }
 /* Sponsored label on action buttons */
 .btn-action.sponsored::after {
-  content: " ?";
+  content: " AD";
   font-size: 10px;
   opacity: .5;
 }
-
 /* -- AD SLOT — SOCIAL BAR (below results) -- */
 .ad-social-bar {
   background: var(--surface2);
@@ -501,7 +500,7 @@ body {
 @media (min-width: 768px) { .ad-sticky-mobile { display: none; } }
 
 /* push body up so sticky ad doesn't cover content */
-body { padding-bottom: 70px; }
+body { padding-bottom: 80px; }
 @media (min-width: 768px) { body { padding-bottom: 0; } }
 </style>
  <script type="application/ld+json">
@@ -530,7 +529,7 @@ body { padding-bottom: 70px; }
 ------------------------ -->
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="/">BD<span>Calc</span></a>
+    <a class="logo" href="index.html">BD<span>Calc</span></a>
     <span class="header-tagline">Bangladesh's Free Calculator Tools</span>
   </div>
 </header>
@@ -604,7 +603,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section active" id="tool-salary">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">💼</span>
         <h2>Bangladesh Salary Calculator 2026</h2>
       </div>
       <div class="calc-body">
@@ -790,7 +789,7 @@ body { padding-bottom: 70px; }
       </ul>
     </div>
     <div class="related-tools">
-      <h4> Related Calculators</h4>
+      <h4>Related Calculators</h4>
       <div class="related-list">
         <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
         <span class="related-link" onclick="showTool('profit')">Profit/Loss</span>
@@ -806,7 +805,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-land">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">📐</span>
         <h2>Bangladesh Land Measurement Converter</h2>
       </div>
       <div class="calc-body">
@@ -850,7 +849,7 @@ body { padding-bottom: 70px; }
               <div class="action-btns">
                 <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">Save Result</a>
                 <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> Share Result </a>
-                <button class="btn-action" onclick="showTool('salary')">More Tools </button>
+                <button class="btn-action" onclick="showTool('salary')">Salary Calculator</button>
               </div>
             </div>
           </div>
@@ -889,7 +888,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-emi">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">🏦</span>
         <h2>Bangladesh Loan EMI Calculator</h2>
       </div>
       <div class="calc-body">
@@ -950,7 +949,7 @@ body { padding-bottom: 70px; }
       </ul>
     </div>
     <div class="related-tools">
-      <h4> Related Calculators</h4>
+      <h4>Related Calculators</h4>
       <div class="related-list">
         <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
         <span class="related-link" onclick="showTool('land')">Land Calculator</span>
@@ -966,7 +965,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-age">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">🎂</span>
         <h2>Age Calculator Bangladesh</h2>
       </div>
       <div class="calc-body">
@@ -996,7 +995,7 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Next Birthday In</span><span class="result-value" id="r-age-next">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">>💾 Save Result</a> </a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">>💾 Save Result</a>
                 <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> 📤 Share Result </a>
                 <button class="btn-action" onclick="showTool('bmi')">Check BMI </button>
               </div>
@@ -1010,7 +1009,7 @@ body { padding-bottom: 70px; }
       </div>
     </div>
     <div class="related-tools">
-      <h4> Related Calculators</h4>
+      <h4>Related Calculators</h4>
       <div class="related-list">
         <span class="related-link" onclick="showTool('bmi')">BMI Calculator</span>
         <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
@@ -1026,7 +1025,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-bmi">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">⚖️</span>
         <h2>BMI Calculator</h2>
       </div>
       <div class="calc-body">
@@ -1057,7 +1056,7 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Ideal Weight Range</span><span class="result-value" id="r-bmi-ideal">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">📤 Share Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">📤 Save Result</a>
                 <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">📤 Share Result</a>
                 <button class="btn-action" onclick="showTool('age')">Age Calculator</button>
               </div>
@@ -1086,7 +1085,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-currency">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">💱</span>
         <h2>BDT Currency Converter</h2>
       </div>
       <div class="calc-body">
@@ -1125,8 +1124,8 @@ body { padding-bottom: 70px; }
               <p style="font-size:11px;color:#718096;margin-top:8px;">* Indicative rates only. Check your bank for actual rates.</p>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener"> </a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> Share</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">📤 Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">📤 Share Result</a>
                 <button class="btn-action" onclick="showTool('salary')">Salary Calculator </button>
               </div>
             </div>
@@ -1139,7 +1138,7 @@ body { padding-bottom: 70px; }
       </div>
     </div>
     <div class="related-tools">
-      <h4> Related Calculators</h4>
+      <h4>Related Calculators</h4>
       <div class="related-list">
         <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
         <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
@@ -1154,7 +1153,7 @@ body { padding-bottom: 70px; }
   <div class="tool-section" id="tool-profit">
     <div class="calc-card">
       <div class="calc-header">
-        <span class="calc-icon"></span>
+        <span class="calc-icon">📈</span>
         <h2>Business Profit & Loss Calculator</h2>
       </div>
       <div class="calc-body">
@@ -1191,8 +1190,8 @@ body { padding-bottom: 70px; }
               <div class="result-row"><span class="result-label">Markup %</span><span class="result-value" id="r-pl-markup">—</span></div>
 
               <div class="action-btns">
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener"> </a>
-                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener"> Share</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('adsterra')" target="_blank" rel="noopener">💾Save Result</a>
+                <a class="btn-action sponsored" href="#" onclick="return handleDirectLink('mobidea')" target="_blank" rel="noopener">💾Share Result</a>
                 <button class="btn-action" onclick="showTool('vat')">VAT Calculator </button>
               </div>
             </div>
@@ -1205,7 +1204,7 @@ body { padding-bottom: 70px; }
       </div>
     </div>
     <div class="related-tools">
-      <h4> Related Calculators</h4>
+      <h4>Related Calculators</h4>
       <div class="related-list">
         <span class="related-link" onclick="showTool('vat')">VAT Calculator</span>
         <span class="related-link" onclick="showTool('salary')">Salary Calculator</span>
@@ -1226,7 +1225,7 @@ body { padding-bottom: 70px; }
   <!-- PROPELLERADS / CLICKADU MOBILE STICKY START -->
   <!-- Replace with your actual sticky mobile banner code -->
   <!-- PROPELLERADS / CLICKADU MOBILE STICKY END -->
-  <div style="width:320px;height:50px;background:#f0f4f8;border:1px dashed #cbd5e0;display:inline-flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;margin:0 auto;">320×50 Mobile Banner</div>
+  <div style="max-width:320px;width:100%;height:50px;background:#f0f4f8;border:1px dashed #cbd5e0;display:inline-flex;align-items:center;justify-content:center;color:#a0aec0;font-size:10px;border-radius:4px;margin:0 auto;">320×50 Mobile Banner</div>
 </div>
 
 <!-- -----------------------
@@ -1333,23 +1332,22 @@ const tax = parseFloat(document.getElementById('sal-tax').value) || 0;
   }
 
   // PF percentage based
- const gross = basic + hra + medical + other;
- const net = gross - pf - tax;
- const annual = net * 12;
- 
-  document.getElementById('r-sal-basic').innerText = basic;
-  document.getElementById('r-sal-hra').innerText = hra;
-  document.getElementById('r-sal-med').innerText = medical;
-  document.getElementById('r-sal-other').innerText = other;
-  document.getElementById('r-sal-gross').innerText = gross;
-  document.getElementById('r-sal-pf').innerText = pf;
-  document.getElementById('r-sal-tax').innerText = tax;
-  document.getElementById('r-sal-net').innerText = net;
-  document.getElementById('r-sal-annual').innerText = annual;
- 
- 
+const gross = basic + hra + medical + other;
+const pfAmount = (basic * pf) / 100;
+const net = gross - pfAmount - tax;
+const annual = net * 12;
+ document.getElementById('r-sal-basic').textContent = fmt(basic);
+ document.getElementById('r-sal-hra').textContent = fmt(hra);
+ document.getElementById('r-sal-med').textContent = fmt(medical);
+ document.getElementById('r-sal-other').textContent = fmt(other);
+ document.getElementById('r-sal-gross').textContent = fmt(gross);
+ document.getElementById('r-sal-pf').textContent = fmt(pfAmount);
+ document.getElementById('r-sal-tax').textContent = fmt(tax);
+ document.getElementById('r-sal-net').textContent = fmt(net);
+ document.getElementById('r-sal-annual').textContent = fmt(annual);
+
  document.getElementById('sal-result').classList.add('show');
-}
+ }
 
 /* ----------------------
    TOOL 2: VAT
@@ -1471,7 +1469,7 @@ function calcAge() {
   const today = new Date(document.getElementById('age-today').value);
 
   if (!document.getElementById('age-dob').value) { alert('Please enter date of birth.'); return; }
-  if (dob >= today) { alert('Date of birth must be in the past.'); return; }
+  if (dob > today) { alert('Date of birth must be in the past.'); return; }
 
   let years  = today.getFullYear() - dob.getFullYear();
   let months = today.getMonth() - dob.getMonth();
@@ -1512,12 +1510,13 @@ function calcBMI() {
   else if (bmi < 30)   cat = ' Overweight';
   else                 cat = ' Obese';
 
-  const idealMin = fmt(18.5 * h * h);
-  const idealMax = fmt(24.9 * h * h);
-
+  const idealMin = (18.5 * h * h).toFixed(1);
+  const idealMax = (24.9 * h * h).toFixed(1);
+  
   document.getElementById('r-bmi-value').textContent = bmi.toFixed(1);
   document.getElementById('r-bmi-cat').textContent   = cat;
-  document.getElementById('r-bmi-ideal').textContent = idealMin.replace(' ','') + ' – ' + idealMax.replace(' ','') + ' kg';
+  document.getElementById('r-bmi-ideal').textContent =
+  idealMin + ' – ' + idealMax + ' kg';
 
   document.getElementById('bmi-result').classList.add('show');
 }
@@ -1549,7 +1548,7 @@ function calcCurrency() {
   const sym     = SYMBOLS[to];
 
   document.getElementById('r-cur-bdt').textContent    = fmt(bdt);
-  document.getElementById('r-cur-rate').textContent   = '1 ' + to.toUpperCase() + ' ˜ ' + rate;
+  document.getElementById('r-cur-rate').textContent   = '1 ' + to.toUpperCase() + ' = BDT ' + rate;
   document.getElementById('r-cur-result').textContent = sym + ' ' + fmtN(result, 2);
 
   document.getElementById('cur-result').classList.add('show');
@@ -1568,12 +1567,18 @@ function calcProfit() {
   const totalCost    = cost * units;
   const totalRevenue = sell * units;
   const net          = totalRevenue - totalCost;
-  const margin       = ((net / totalRevenue) * 100).toFixed(2);
-  const markup       = ((net / totalCost) * 100).toFixed(2);
+  const margin = totalRevenue > 0
+  ? ((net / totalRevenue) * 100).toFixed(2)
+  : 0;
+
+  const markup = totalCost > 0
+  ? ((net / totalCost) * 100).toFixed(2)
+  : 0;
 
   const netEl = document.getElementById('r-pl-net');
- netEl.textContent = fmt(Math.abs(net)) + (net >= 0  ' Profit' : ' Loss');
-  netEl.style.color = net >= 0  'var(--green)' : 'var(--red)';
+  netEl.textContent = fmt(Math.abs(net)) + (net >= 0 ? ' Profit' : ' Loss');
+
+  netEl.style.color = net >= 0 ? 'var(--green)' : 'var(--red)';
 
   document.getElementById('r-pl-cost').textContent    = fmt(totalCost);
   document.getElementById('r-pl-revenue').textContent = fmt(totalRevenue);
@@ -1612,9 +1617,9 @@ function calcProfit() {
      ADSTERRA SOCIAL BAR:
      Replace placeholder div inside .ad-social-bar in each tool section
 ------------------------------------------------ -->
-<a href="Notepad/about.html">About</a>
-<a href="Notepad/contact.html">Contact Us</a>
-<a href="Notepad/privacy.html">Privcy</a> 
+<a href="about.html">About</a>
+<a href="contact.html">Contact Us</a>
+<a href="privacy.html">Privacy</a>
 </main>
 </body>
 </html>
